@@ -14,6 +14,14 @@ namespace CadastroPessoaApp.Models
         [Display(Name = "Data de Nascimento")]
         public DateTime DataNascimento { get; set; }
 
+        [Required(ErrorMessage = "Cidade é Obrigatorio")]
+        [StringLength(100)]
+        public string Cidade { get; set; }
+
+        [Required(ErrorMessage = "Estado é Obrigatorio")]
+        [StringLength(100)]
+        public string Estado { get; set; }
+
         [Required(ErrorMessage = "Email é obrigatório")]
         [EmailAddress]
         public string Email { get; set; }
